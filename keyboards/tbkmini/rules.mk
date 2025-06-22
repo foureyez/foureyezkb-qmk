@@ -1,3 +1,6 @@
 AUDIO_SUPPORTED = no        # Audio is not supported
-VIA_ENABLE = yes
+LTO_ENABLE = yes
+# VIA_ENABLE = yes
 SERIAL_DRIVER = vendor
+# COMBO_ENABLE = yes
+# COMMAND_ENABLE = yes
