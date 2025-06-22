@@ -46,19 +46,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 //    ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐   ┌───────────┬────────────┬─────┬───┬────┬────┐
-//    │ QK_BOOT │    !    │    @    │    #    │    $    │    %    │   │     ^     │     1      │  2  │ 3 │ no │ no │
+//    │ LALT(q) │    !    │    @    │    #    │    $    │    %    │   │     ^     │     1      │  2  │ 3 │ no │ no │
 //    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├───────────┼────────────┼─────┼───┼────┼────┤
 //    │         │ LALT(a) │ LALT(s) │ LALT(d) │ LALT(f) │ LALT(g) │   │     &     │     4      │  5  │ 6 │ 0  │ no │
 //    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├───────────┼────────────┼─────┼───┼────┼────┤
-//    │         │ LALT(z) │ LALT(x) │ LALT(c) │ LALT(v) │ LALT(b) │   │     *     │     7      │  8  │ 9 │ no │ no │
+//    │ QK_BOOT │ LALT(z) │ LALT(x) │ LALT(c) │ LALT(v) │ LALT(b) │   │     *     │     7      │  8  │ 9 │ no │ no │
 //    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤   ├───────────┼────────────┼─────┼───┴────┴────┘
 //                                  │         │         │         │   │ MO(_DUAL) │ LALT(bspc) │     │
 //                                  └─────────┴─────────┴─────────┘   └───────────┴────────────┴─────┘
 [_NUM] = LAYOUT_split_3x6_3(
-  QK_BOOT , KC_EXLM    , KC_AT      , KC_HASH    , KC_DLR     , KC_PERC    ,     KC_CIRC   , KC_1          , KC_2    , KC_3 , XXXXXXX , XXXXXXX,
-  _______ , LALT(KC_A) , LALT(KC_S) , LALT(KC_D) , LALT(KC_F) , LALT(KC_G) ,     KC_AMPR   , KC_4          , KC_5    , KC_6 , KC_0    , XXXXXXX,
-  _______ , LALT(KC_Z) , LALT(KC_X) , LALT(KC_C) , LALT(KC_V) , LALT(KC_B) ,     KC_ASTR   , KC_7          , KC_8    , KC_9 , XXXXXXX , XXXXXXX,
-                                      _______    , _______    , _______    ,     MO(_DUAL) , LALT(KC_BSPC) , _______
+  LALT(KC_Q) , KC_EXLM    , KC_AT      , KC_HASH    , KC_DLR     , KC_PERC    ,     KC_CIRC   , KC_1          , KC_2    , KC_3 , XXXXXXX , XXXXXXX,
+  _______    , LALT(KC_A) , LALT(KC_S) , LALT(KC_D) , LALT(KC_F) , LALT(KC_G) ,     KC_AMPR   , KC_4          , KC_5    , KC_6 , KC_0    , XXXXXXX,
+  QK_BOOT    , LALT(KC_Z) , LALT(KC_X) , LALT(KC_C) , LALT(KC_V) , LALT(KC_B) ,     KC_ASTR   , KC_7          , KC_8    , KC_9 , XXXXXXX , XXXXXXX,
+                                         _______    , _______    , _______    ,     MO(_DUAL) , LALT(KC_BSPC) , _______
 ),
 
 //    ┌─────┬─────┬───┬─────┬─────┬───────────┐   ┌──────────┬─────────┬──────────┬──────┬─────┬─────┐
