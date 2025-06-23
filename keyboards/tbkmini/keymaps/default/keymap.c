@@ -49,47 +49,47 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├───────────┼────────────┼─────┼───┼────┼─────────┤
 //    │         │ LALT(a) │ LALT(s) │ LALT(d) │ LALT(f) │ LALT(g) │   │     &     │     4      │  5  │ 6 │ 0  │ LALT(;) │
 //    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├───────────┼────────────┼─────┼───┼────┼─────────┤
-//    │ QK_BOOT │ LALT(z) │ LALT(x) │ LALT(c) │ LALT(v) │ LALT(b) │   │     *     │     7      │  8  │ 9 │ no │   no    │
+//    │         │ LALT(z) │ LALT(x) │ LALT(c) │ LALT(v) │ LALT(b) │   │     *     │     7      │  8  │ 9 │ no │         │
 //    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤   ├───────────┼────────────┼─────┼───┴────┴─────────┘
 //                                  │         │         │         │   │ MO(_DUAL) │ LALT(bspc) │     │
 //                                  └─────────┴─────────┴─────────┘   └───────────┴────────────┴─────┘
 [_NUM] = LAYOUT_split_3x6_3(
   LALT(KC_Q) , KC_EXLM    , KC_AT      , KC_HASH    , KC_DLR     , KC_PERC    ,     KC_CIRC   , KC_1          , KC_2    , KC_3 , XXXXXXX , XXXXXXX      ,
   _______    , LALT(KC_A) , LALT(KC_S) , LALT(KC_D) , LALT(KC_F) , LALT(KC_G) ,     KC_AMPR   , KC_4          , KC_5    , KC_6 , KC_0    , LALT(KC_SCLN),
-  QK_BOOT    , LALT(KC_Z) , LALT(KC_X) , LALT(KC_C) , LALT(KC_V) , LALT(KC_B) ,     KC_ASTR   , KC_7          , KC_8    , KC_9 , XXXXXXX , XXXXXXX      ,
+  _______    , LALT(KC_Z) , LALT(KC_X) , LALT(KC_C) , LALT(KC_V) , LALT(KC_B) ,     KC_ASTR   , KC_7          , KC_8    , KC_9 , XXXXXXX , _______      ,
                                          _______    , _______    , _______    ,     MO(_DUAL) , LALT(KC_BSPC) , _______
 ),
 
-//    ┌─────┬─────┬───┬─────┬─────┬───────────┐   ┌──────────┬──────┬──────────┬──────┬─────┬─────┐
-//    │  `  │     │ ( │  #  │  )  │           │   │          │      │          │      │     │     │
-//    ├─────┼─────┼───┼─────┼─────┼───────────┤   ├──────────┼──────┼──────────┼──────┼─────┼─────┤
-//    │  ~  │  -  │ { │  +  │  }  │     "     │   │   left   │ down │    up    │ rght │     │     │
-//    ├─────┼─────┼───┼─────┼─────┼───────────┤   ├──────────┼──────┼──────────┼──────┼─────┼─────┤
-//    │     │  _  │ [ │  =  │  ]  │     '     │   │ VIM_SAVE │      │ VIM_QUIT │      │     │     │
-//    └─────┴─────┴───┼─────┼─────┼───────────┤   ├──────────┼──────┼──────────┼──────┴─────┴─────┘
-//                    │     │     │ MO(_DUAL) │   │          │      │          │
-//                    └─────┴─────┴───────────┘   └──────────┴──────┴──────────┘
+//    ┌─────┬─────┬───┬─────────┬─────┬───────────┐   ┌──────────┬──────┬──────────┬──────┬─────┬─────┐
+//    │  `  │     │ ( │    +    │  )  │           │   │          │      │          │      │     │     │
+//    ├─────┼─────┼───┼─────────┼─────┼───────────┤   ├──────────┼──────┼──────────┼──────┼─────┼─────┤
+//    │  ~  │  -  │ { │    =    │  }  │     "     │   │   left   │ down │    up    │ rght │     │     │
+//    ├─────┼─────┼───┼─────────┼─────┼───────────┤   ├──────────┼──────┼──────────┼──────┼─────┼─────┤
+//    │     │  _  │ [ │ LCTL(c) │  ]  │     '     │   │ VIM_SAVE │      │ VIM_QUIT │      │     │     │
+//    └─────┴─────┴───┼─────────┼─────┼───────────┤   ├──────────┼──────┼──────────┼──────┴─────┴─────┘
+//                    │         │     │ MO(_DUAL) │   │          │      │          │
+//                    └─────────┴─────┴───────────┘   └──────────┴──────┴──────────┘
 [_SPCL] = LAYOUT_split_3x6_3(
-  KC_GRV  , _______ , KC_LPRN , KC_HASH  , KC_RPRN , _______   ,     _______  , _______ , _______  , _______  , _______ , _______,
-  KC_TILD , KC_MINS , KC_LCBR , KC_PLUS  , KC_RCBR , KC_DQT    ,     KC_LEFT  , KC_DOWN , KC_UP    , KC_RIGHT , _______ , _______,
-  _______ , KC_UNDS , KC_LBRC , KC_EQUAL , KC_RBRC , KC_QUOT   ,     VIM_SAVE , _______ , VIM_QUIT , _______  , _______ , _______,
-                                _______  , _______ , MO(_DUAL) ,     _______  , _______ , _______
+  KC_GRV  , _______ , KC_LPRN , KC_PLUS    , KC_RPRN , _______   ,     _______  , _______ , _______  , _______  , _______ , _______,
+  KC_TILD , KC_MINS , KC_LCBR , KC_EQUAL   , KC_RCBR , KC_DQT    ,     KC_LEFT  , KC_DOWN , KC_UP    , KC_RIGHT , _______ , _______,
+  _______ , KC_UNDS , KC_LBRC , LCTL(KC_C) , KC_RBRC , KC_QUOT   ,     VIM_SAVE , _______ , VIM_QUIT , _______  , _______ , _______,
+                                _______    , _______ , MO(_DUAL) ,     _______  , _______ , _______
 ),
 
-//    ┌─────────┬────┬────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬────┬────┬────┐
-//    │ QK_BOOT │ no │ no │ no  │ no  │ no  │   │ no  │ no  │ no  │ no │ no │ no │
-//    ├─────────┼────┼────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼────┼────┼────┤
-//    │   no    │ no │ no │ no  │ no  │ no  │   │ no  │ no  │ no  │ no │ no │ no │
-//    ├─────────┼────┼────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼────┼────┼────┤
-//    │   no    │ no │ no │ no  │ no  │ no  │   │ no  │ no  │ no  │ no │ no │ no │
-//    └─────────┴────┴────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼────┴────┴────┘
-//                        │     │     │     │   │     │     │     │
-//                        └─────┴─────┴─────┘   └─────┴─────┴─────┘
+//    ┌─────────┬────┬────┬─────┬─────┬──────────┐   ┌──────────┬─────┬─────┬────┬────┬────┐
+//    │ QK_BOOT │ no │ no │ no  │ no  │    z     │   │    no    │ no  │ no  │ no │ no │ no │
+//    ├─────────┼────┼────┼─────┼─────┼──────────┤   ├──────────┼─────┼─────┼────┼────┼────┤
+//    │   no    │ no │ no │ no  │ no  │ DF(_WIN) │   │ DF(_MAC) │ no  │ no  │ no │ no │ no │
+//    ├─────────┼────┼────┼─────┼─────┼──────────┤   ├──────────┼─────┼─────┼────┼────┼────┤
+//    │   no    │ no │ no │ no  │ no  │    no    │   │    no    │ no  │ no  │ no │ no │ no │
+//    └─────────┴────┴────┼─────┼─────┼──────────┤   ├──────────┼─────┼─────┼────┴────┴────┘
+//                        │     │     │          │   │          │     │     │
+//                        └─────┴─────┴──────────┘   └──────────┴─────┴─────┘
 [_DUAL] = LAYOUT_split_3x6_3(
-  QK_BOOT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
-  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
-  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
-                                _______ , _______ , _______ ,     _______ , _______ , _______
+  QK_BOOT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_Z     ,     XXXXXXX  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
+  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , DF(_WIN) ,     DF(_MAC) , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
+  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX  ,     XXXXXXX  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
+                                _______ , _______ , _______  ,     _______  , _______ , _______
 )
 };
 
