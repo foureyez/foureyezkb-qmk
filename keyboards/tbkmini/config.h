@@ -29,3 +29,9 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 1000U
+
+// The “hold on other key press” mode, in addition to the default behavior,
+// immediately selects the hold action when another key is pressed while the dual-role key is held down,
+// even if this happens earlier than the tapping term.
+#define HOLD_ON_OTHER_KEY_PRESS
+#define TAPPING_TERM 150
