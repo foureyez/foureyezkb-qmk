@@ -494,5 +494,8 @@ pytest:
 format-and-pytest:
 	RUNTIME=docker ./util/docker_cmd.sh bash -lic "$(CONTAINER_PREAMBLE); qmk format-c --core-only -a && qmk format-python -a && qmk pytest"
 
-ftbkmini:
+tbkmini:
 	qmk flash -kb tbkmini --keymap default
+
+scylla:
+	qmk flash -kb scylla --keymap default
